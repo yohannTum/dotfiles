@@ -34,8 +34,8 @@ set smartindent
 "" make curly braces not alter the jumplist (normal and visual mode)
 nnoremap { :keepjumps normal! }<cr>
 nnoremap } :keepjumps normal! {<cr>
-xnoremap } :<C-u>keepjumps normal! gv}<cr>
-xnoremap { :<C-u>keepjumps normal! gv{<cr>
+xnoremap } :<C-u>keepjumps normal! gv{<cr>
+xnoremap { :<C-u>keepjumps normal! gv}<cr>
 
 
 "" Interface :
@@ -79,8 +79,9 @@ nnoremap <leader> <C-w>
 
 
 "" Clear highlighting on escape in normal mode
-" nnoremap <esc> :noh<return><esc>
-" nnoremap <esc>^[ <esc>^[
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
+set timeoutlen=1000 ttimeoutlen=5 " faster normal mode switch
 
 " g = Gitfugitive (git commands)
 noremap <leader>gs :Gstatus<cr>
