@@ -7,7 +7,7 @@ if [ -f "Session.vim" ] && [ -z $@ ]
 then
     $VIM_PATH -S
 else # else, we take the arguments into account
-    if [ $@ == "." ]
+    if [[ "$@" == "." ]]
     then
         $VIM_PATH
     else
