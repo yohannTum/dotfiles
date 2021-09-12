@@ -4,7 +4,12 @@ set nocompatible
 " force 256 colors on the terminal
 set t_Co=256
 set hidden
-
+" Auto-install vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+        echo "Installing VimPlug..."
+            silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+                autocmd VimEnter * PlugInstall
+                endif
 "" Text :
 syntax on
 au BufRead,BufNewFile *.g set filetype=antlr3
