@@ -33,5 +33,5 @@ require('coc')
 -- require('lsp_languages/typescript')
 -- require('lsp_languages/vue')
 
-require('treesitter')
+-- require('treesitter')
 
