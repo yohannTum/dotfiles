@@ -27,9 +27,20 @@ return packer.startup(function(use)
     }
     -- Colorscheme :
     use {'rrethy/nvim-base16'}
-
+    -- use {
+    --     'chipsenkbeil/distant.nvim',
+    --     config = function()
+    --         require('distant').setup {
+    --             -- Applies Chip's personal settings to every machine you connect to
+    --             -- 1. Ensures that distant servers terminate with no connections
+    --             -- 2. Provides navigation bindings for remote directories
+    --             -- 3. Provides keybinding to jump into a remote file's parent directory
+    --             ['*'] = require('distant.settings').chip_default()
+    --         }
+    --     end
+    -- }
     -- Plugins :
-    use {'neoclide/coc.nvim', branch = 'release'}
+
     use {'neovim/nvim-lspconfig'}
     use {'hrsh7th/nvim-compe'}
     use {'williamboman/nvim-lsp-installer'}
@@ -48,5 +59,14 @@ return packer.startup(function(use)
     }
     use {'nvim-treesitter/playground'}
     use {'posva/vim-vue'}
+
+    -- Prettier
+    use{'jose-elias-alvarez/null-ls.nvim'}
+    use{'MunifTanjim/prettier.nvim'}
+    use{'mhartington/formatter.nvim'}
+    use{'nvim-lua/plenary.nvim'}
+
+    -- Rofi settup
+    use {'Fymyte/rasi.vim',ft = 'rasi'}
 end)
 

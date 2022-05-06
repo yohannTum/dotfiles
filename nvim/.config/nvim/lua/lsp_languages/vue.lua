@@ -1,4 +1,4 @@
-paq {'FuDesign2008/vim-lsp-vue'}
+-- paq {'FuDesign2008/vim-lsp-vue'}
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 

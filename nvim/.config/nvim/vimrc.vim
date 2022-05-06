@@ -10,7 +10,7 @@ set termguicolors
 
 au BufRead,BufNewFile *.g set filetype=antlr3
 au BufRead,BufNewFile *.g4 set filetype=antlr4
-set clipboard+=unnamedplus " syncronise clipboard with the system
+set clipboard+=unnamedplus " synchronize clipboard with the system
 set expandtab
 set nowrap
 set shiftwidth=4
@@ -26,7 +26,8 @@ set noswapfile          " disable swapefile
 set sidescrolloff=15
 set smartindent
 set smartcase
-set so=999              " center the cursor with the window
+" set so=999              " center the cursor with the window
+set so=3                " see up and down to 5 lines
 
 " neovim not compatible anymore with this feature
 if !has('nvim') " specific to vim
@@ -59,10 +60,15 @@ xnoremap <silent> } :<C-u>keepjumps normal! gv{<cr>
 xnoremap <silent> { :<C-u>keepjumps normal! gv}<cr>
 
 " vertical navigation
-map <A-j> 5j
-map <A-k> 5k
-map <C-j> 15j
-map <C-k> 15k
+nnoremap <A-j> <C-d>
+nnoremap <A-k> <C-u>
+nnoremap <C-j> 10j
+nnoremap <C-k> 10k
+
+vnoremap <A-j> <C-d>
+vnoremap <A-k> <C-u>
+vnoremap <C-j> 10j
+vnoremap <C-k> 10k
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -110,7 +116,6 @@ call plug#end()
 
 " Actions after plug#end()
 doautocmd User PlugLoaded
-
 """"" needs to be reworked
 set shortmess+=c
 let g:completion_matching_strategy_list=['exact', 'substring', 'fuzzy']

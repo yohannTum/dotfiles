@@ -22,16 +22,22 @@ end
 
 setup_diags()
 
-vim.o.completeopt = "menu,menuone,noselect"
+vim.opt.laststatus = 3
 
 -- Settups
-require('coc')
--- require('coc_languages/python')
 
--- require('lsp')
--- require('lsp_languages/python')
--- require('lsp_languages/typescript')
--- require('lsp_languages/vue')
+require('lsp')
+require('completion')
+require('lsp_installer_settings')
+require('lsp_languages/python')
+require('lsp_languages/typescript')
+require('lsp_languages/vue')
+require('lsp_languages/css')
+require('lsp_languages/ccls')
 
--- require('treesitter')
+vim.o.completeopt = "menu,menuone,noselect"
+
+require('treesitter')
+
+require('_prettier')
 
