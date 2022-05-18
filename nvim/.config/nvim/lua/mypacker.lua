@@ -26,7 +26,7 @@ return packer.startup(function(use)
         opt = false
     }
     -- Colorscheme :
-    use {'rrethy/nvim-base16'}
+    use { 'rrethy/nvim-base16' }
     -- use {
     --     'chipsenkbeil/distant.nvim',
     --     config = function()
@@ -41,14 +41,14 @@ return packer.startup(function(use)
     -- }
     -- Plugins :
 
-    use {'neovim/nvim-lspconfig'}
-    use {'hrsh7th/nvim-compe'}
-    use {'williamboman/nvim-lsp-installer'}
-    use {'hrsh7th/cmp-nvim-lsp'}
-    use {'hrsh7th/cmp-buffer'}
-    use {'hrsh7th/cmp-path'}
-    use {'hrsh7th/cmp-cmdline'}
-    use {'hrsh7th/nvim-cmp'}
+    use { 'neovim/nvim-lspconfig' }
+    use { 'hrsh7th/nvim-compe' }
+    use { 'williamboman/nvim-lsp-installer' }
+    use { 'hrsh7th/cmp-nvim-lsp' }
+    use { 'hrsh7th/cmp-buffer' }
+    use { 'hrsh7th/cmp-path' }
+    use { 'hrsh7th/cmp-cmdline' }
+    use { 'hrsh7th/nvim-cmp' }
 
     -- Treesitter
     use {
@@ -57,16 +57,23 @@ return packer.startup(function(use)
         run = ':TSUpdate',
         -- confip = print('treesitter is loaded'),
     }
-    use {'nvim-treesitter/playground'}
-    use {'posva/vim-vue'}
+    use { 'nvim-treesitter/playground' }
+    use { 'posva/vim-vue' }
 
     -- Prettier
-    use{'jose-elias-alvarez/null-ls.nvim'}
-    use{'MunifTanjim/prettier.nvim'}
-    use{'mhartington/formatter.nvim'}
-    use{'nvim-lua/plenary.nvim'}
+    use { 'jose-elias-alvarez/null-ls.nvim' }
+    use { 'MunifTanjim/prettier.nvim' }
+    use { 'mhartington/formatter.nvim' }
+    use { 'nvim-lua/plenary.nvim' }
 
     -- Rofi settup
-    use {'Fymyte/rasi.vim',ft = 'rasi'}
-end)
+    use { 'Fymyte/rasi.vim', ft = 'rasi' }
 
+    -- nvim tree
+    use { 'kyazdani42/nvim-tree.lua',
+        -- tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
+    use { 'kyazdani42/nvim-web-devicons' }
+
+    -- 
+end)

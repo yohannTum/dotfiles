@@ -95,9 +95,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 call plug#begin('~/.vim/plugged')
 source ~/.config/nvim/plugins/airline.vim
 source ~/.config/nvim/plugins/fugitive.vim " need to define a letter (gs)
-source ~/.config/nvim/plugins/fzf.vim " p
+source ~/.config/nvim/plugins/fzf.vim " leader p
 source ~/.config/nvim/plugins/latex.vim
-source ~/.config/nvim/plugins/undotree.vim " u
+source ~/.config/nvim/plugins/undotree.vim " leader u
 " source ~/.config/nvim/plugins/ripgrep.vim
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'

@@ -1,3 +1,3 @@
 Plug 'mbbill/undotree'
 
-nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <leader>U :UndotreeShow<CR>

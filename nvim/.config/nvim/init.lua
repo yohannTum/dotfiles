@@ -9,16 +9,18 @@ vim.cmd('source ~/.config/nvim/vimrc.vim')
 require('mypacker')
 
 local function setup_diags()
-  vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics,
-    {
-      virtual_text = true,
-      signs = false,
-      update_in_insert = false,
-      underline = false,
-    }
-  )
+    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+        vim.lsp.diagnostic.on_publish_diagnostics,
+        {
+            virtual_text = true,
+            signs = false,
+            update_in_insert = false,
+            underline = false,
+        }
+    )
 end
+
+--
 
 setup_diags()
 
@@ -41,3 +43,4 @@ require('treesitter')
 
 require('_prettier')
 
+require('nvim_tree')
