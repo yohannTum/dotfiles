@@ -1,3 +1,0 @@
-return {
-	alwaysShowStatus = true,
-}
