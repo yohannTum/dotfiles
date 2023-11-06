@@ -1,46 +1,26 @@
--- vim.cmd 'packadd paq-nvim'
+require('user.reload') -- allows you to reload your config
+require('user')
+--[[
+TODO:
+- pin packer plugins
+- setting up : c++ (ccls), dotnet, java (tests), docker, latex, vue
+- readme (switching between branches / dependencies):
+- git common practicies (feat, add ...)
+- whichkey on attach : packer, Telescope
+- packer use in each file where used
 
-vim.cmd('source ~/.config/nvim/vimrc.vim')
+nvim-tree = global nvim-tree, not specific to tabs
+solution? : https://github.com/romgrk/barbar.nvim#integration-with-filetree-plugins
+from : https://www.reddit.com/r/neovim/comments/sey7l9/file_tree_as_a_sidebar/
 
--- vim.cmd('colorscheme base16-material-darker')
+https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-source
 
+dependencies :
+java sdk 17
+fd
+fzf
+nvim 7 or 8?
 
--- Load all the plugins
-require('mypacker')
-
-local function setup_diags()
-    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-        vim.lsp.diagnostic.on_publish_diagnostics,
-        {
-            virtual_text = true,
-            signs = false,
-            update_in_insert = false,
-            underline = false,
-        }
-    )
-end
-
---
-
-setup_diags()
-
-vim.opt.laststatus = 3
-
--- Settups
-
-require('lsp')
-require('completion')
-require('lsp_installer_settings')
-require('lsp_languages/python')
-require('lsp_languages/typescript')
-require('lsp_languages/vue')
-require('lsp_languages/css')
-require('lsp_languages/ccls')
-
-vim.o.completeopt = "menu,menuone,noselect"
-
-require('treesitter')
-
-require('_prettier')
-
-require('nvim_tree')
+(null-ls)
+(github)
+]]
