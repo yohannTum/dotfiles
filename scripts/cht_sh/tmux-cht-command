@@ -6,7 +6,6 @@ cat
 chmod
 chown
 cp
-cp
 docker
 docker-compose
 find
@@ -16,6 +15,7 @@ git-rebase
 git-status
 git-worktree
 grep
+gzip
 head
 jq
 kill
@@ -37,6 +37,7 @@ tail
 tar
 tldr
 tr
+unzip
 vim
 xargs
 zip
