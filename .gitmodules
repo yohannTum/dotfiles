@@ -1,3 +1,5 @@
 [submodule "scripts/sync_clipboard_file/clipnotify"]
 	path = scripts/sync_clipboard_file/clipnotify
 	url = https://github.com/cdown/clipnotify.git
+	branch = master
+	ignore = dirty
